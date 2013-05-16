@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+    <head>
+        <meta charset="utf-8">
+        <title>HSB - Styrelseapp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./stylesheets/default.css">
+        <script type="text/javascript" src="./javascripts/jquery.js"></script>
+        <script type="text/javascript" src="./javascripts/Swipr-master/swipr-1.1-min.js"></script>
+        
+        <script>
+			$(document).ready(function () {
+			
+				var $swipeIndicators = $('.gallery-indicators .item');
+				
+				var swipe = new Swipr(document.getElementById('mySwiprContainer'), {
+					auto:5000,
+					onSwipeEnd: function() {
+					
+						$swipeIndicators.removeClass('active');
+						$swipeIndicators.eq(this.index()).addClass('active');
+						
+					}
+				});
+				
+				$swipeIndicators.on('click', function(){
+				
+					swipe.slideTo($(this).index());
+					swipe.stop();
+					
+				});
+			});
+		</script>
+        
+        <style>
+			#mySwiprContainer {
+				position: relative;
+				overflow: hidden;
+			}
+				#mySwiprContainer .swipe-item {
+					float: left;
+				}
+		</style>
+        
+    </head>
+    <body>
+	    <div class="container">
+	    	<div class="row">
+		    	<div class="span12">
+		    		<div class="hero-unit">
+				    	<h1>En liten rubrik</h1>
+				    	<p>Och här kommer lite text som vi kan testa</p>
+		    		</div>
+		    	</div>
+	    	</div>
+	    	<div class="row">
+	    		<div class="span12">
+	    			<div class="gallery-container">
+						<div class="swipr" id="mySwiprContainer">
+							<div class="swipe-item">
+								<img src="images/swipr/1.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+								<img src="images/swipr/mobile/1.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+							</div>
+							<div class="swipe-item">
+								<img src="images/swipr/2.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+								<img src="images/swipr/mobile/2.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+							</div>
+							<div class="swipe-item">
+								<img src="images/swipr/3.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+								<img src="images/swipr/mobile/3.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+							</div>
+							<div class="swipe-item">
+								<img src="images/swipr/4.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+								<img src="images/swipr/mobile/4.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
+							</div>
+						</div>
+						<div class="gallery-indicators">
+							<div class="absolute-center-box">
+								<div class="inner">
+									<div class="item active"><span></span></div>
+									<div class="item"><span></span></div>
+									<div class="item"><span></span></div>
+									<div class="item"><span></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+	    		</div>
+	    	</div>
+	    	<div class="row">
+	    		<div class="span12">
+	    			<table class="table table-striped">
+	    				<tr>
+	    					<th>Medarbetare Welcom Web</th>
+	    				</tr>
+	    				<tr>
+	    					<td>Robert Frederiksen</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Och någon annan anonym</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Björn</td>
+	    				</tr>
+	    				<tr>
+	    					<td>Ludvig</td>
+	    				</tr>
+	    			</table>
+	    		</div>
+	    	</div>
+	    </div>
+    </body>
+</html>
