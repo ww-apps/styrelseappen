@@ -1,114 +1,236 @@
 <!DOCTYPE html>
-<html lang="sv-SE">
-    <head>
-        <meta charset="utf-8">
-        <title>HSB - Styrelseapp</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./stylesheets/default.css">
-        <script type="text/javascript" src="./javascripts/jquery.js"></script>
-        <script type="text/javascript" src="./javascripts/Swipr-master/swipr-1.1-min.js"></script>
-        
-        <script>
-			$(document).ready(function () {
-			
-				var $swipeIndicators = $('.gallery-indicators .item');
-				
-				var swipe = new Swipr(document.getElementById('mySwiprContainer'), {
-					auto:5000,
-					onSwipeEnd: function() {
-					
-						$swipeIndicators.removeClass('active');
-						$swipeIndicators.eq(this.index()).addClass('active');
-						
-					}
-				});
-				
-				$swipeIndicators.on('click', function(){
-				
-					swipe.slideTo($(this).index());
-					swipe.stop();
-					
-				});
-			});
-		</script>
-        
-        <style>
-			#mySwiprContainer {
-				position: relative;
-				overflow: hidden;
-			}
-				#mySwiprContainer .swipe-item {
-					float: left;
-				}
-		</style>
-        
-    </head>
-    <body>
-	    <div class="container">
-	    	<div class="row">
-		    	<div class="span12">
-		    		<div class="hero-unit">
-				    	<h1>En liten rubrik</h1>
-				    	<p>Och här kommer lite text som vi kan testa</p>
-		    		</div>
-		    	</div>
-	    	</div>
-	    	<div class="row">
-	    		<div class="span12">
-	    			<div class="gallery-container">
-						<div class="swipr" id="mySwiprContainer">
-							<div class="swipe-item">
-								<img src="images/swipr/1.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-								<img src="images/swipr/mobile/1.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-							</div>
-							<div class="swipe-item">
-								<img src="images/swipr/2.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-								<img src="images/swipr/mobile/2.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-							</div>
-							<div class="swipe-item">
-								<img src="images/swipr/3.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-								<img src="images/swipr/mobile/3.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-							</div>
-							<div class="swipe-item">
-								<img src="images/swipr/4.jpg" class="hidden-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-								<img src="images/swipr/mobile/4.jpg" class="visible-phone" alt="Swipr - a lightweight js-library from Welcom Web" />
-							</div>
+<html ng-app="arvodeApp">
+<head>
+	<title>Arvode</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" href="css/jquery.mobile.css" />
+	<link rel="stylesheet" href="css/ios-checkboxes.css" />
+	<!--<link rel="stylesheet" href="css/style.css" />-->
+	<link rel="stylesheet/less" type="text/css" href="css/style.less"/>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile.min.js"></script>
+	<script src="js/ios-checkboxes.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="js/app.js"></script>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+	<div data-role="page" id="Home">
+		<div data-role="header">
+			<a></a>
+		</div>
+		<div data-role="content">
+			<h2>Välkommen till HSB Göteborgs styrelseapp</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis risus lectus, eu euismod lacus condimentum at. Ut consequat, felis sed iaculis iaculis, enim augue placerat orci, eu tincidunt lacus lectus nec ipsum. Aenean laoreet purus at diam fermentum, mattis auctor mauris tincidunt. Sed tempor suscipit tellus. Nunc faucibus est magna, vel dictum metus eleifend at.</p>
+			<a href="#Kalk_A" class="btn btn-hsb btn-block btn-hsb-blue btn-icon clearfix" id="btn-start">
+				<div>
+					<div class="img">
+						<img src="img/icon-kalk.png" />
+					</div>
+					<div class="content">
+						<h2>Starta kalkylatorn</h2>
+						<h3>Se vilket styrelsearvode du ska ha.</h3>
+					</div>
+				</div>
+			</a>
+			<a href="#PaketList" class="btn btn-hsb btn-block btn-icon clearfix" id="btn-list">
+				<div>
+					<div class="img">
+						<img src="img/icon-list.png" />
+					</div>
+					<div class="content">
+						<h2>HSB Förvaltningspaket</h2>
+						<h3>Se vad vi kan göra för er förening.</h3>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="PaketList" ng-controller="PaketListCtrl">
+		<div data-role="header">
+			<!--<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>-->
+			<a href="#Home" class="leftbutton"><img src="img/tillbaka.png" /></a>
+		</div>
+		<div data-role="content">
+			<ul class="hsb-list" id="PaketList_list">
+				<li class="package clearfix" ng-repeat="package in packages">
+					<a href="#PaketContent" ng-click="packageState.selected = package">
+						<img ng-src="img/paket-{{ package.id }}.png" />
+						<div>
+							<h2>{{ package.title }}</h2>
+							<p>{{ package.excerpt }}</p>
 						</div>
-						<div class="gallery-indicators">
-							<div class="absolute-center-box">
-								<div class="inner">
-									<div class="item active"><span></span></div>
-									<div class="item"><span></span></div>
-									<div class="item"><span></span></div>
-									<div class="item"><span></span></div>
-								</div>
-							</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="page" id="PaketContent" ng-controller="PaketContentCtrl">
+		<div data-role="header">
+			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+		</div>
+		<div data-role="content">
+			<div class="hsb-package-content">
+				<h2>{{ packageState.selected.title }}</h2>
+				<p>
+					<img ng-src="img/paket-{{ packageState.selected.id }}.png" />
+					<span ng-bind-html="packageState.selected.text|nl2br"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="Kalk_A" ng-controller="KalkACtrl">
+		<div data-role="header">
+			<a href="#" class="leftbutton"  data-rel="back"><img src="img/tillbaka.png" /></a>
+		</div>
+		<div data-role="content">
+			<h3>Hur många styrelsemedlemmar är ni?</h3>
+			<div class="hsb-grid" id="hsb-grid-members">
+				<div class="hsb-grid-inner clearfix" data-children="{{ kalkState.members }}">
+					<div ng-repeat="i in []|range:16">
+						<img ng-src="img/{{ portraits[(i + portraitSeed) % portraits.length] }}" ng-show="kalkState.members > i" />
+					</div>
+				</div>
+			</div>
+			<p class="hsb-range-value sans">{{ kalkState.members }} Styrelsemedlem<span ng-show="kalkState.members > 1">mar</span></p>
+			<input type="range" min="3" max="16" ng-model="kalkState.members" data-role="none" class="hsb-range" id="hsb-range-members" />
+			<a href="#Kalk_B" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
+				<h2>Nästa Steg &rarr;</h2>
+			</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="Kalk_B" ng-controller="KalkBCtrl">
+		<div data-role="header">
+			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+		</div>
+		<div data-role="content">
+			<h3>Hur många lägenheter är det i er förening?</h3>
+			<div id="hsb-houses">
+				<div class="hsb-house">
+					<img class="hsb-house-roof" src="img/house-1-roof.png" />
+					<img class="hsb-house-mid" src="img/house-1-mid.png" ng-show="kalkState.apartments > 100" />
+					<img class="hsb-house-mid" src="img/house-1-mid.png" ng-show="kalkState.apartments > 300" />
+					<img class="hsb-house-mid" src="img/house-1-mid.png" ng-show="kalkState.apartments > 500" />
+					<img class="hsb-house-base" src="img/house-1-base.png" />
+					<img class="hsb-house-tree" src="img/tree.png" />
+				</div>
+				<div class="hsb-house">
+					<img class="hsb-house-roof" src="img/house-2-roof.png" />
+					<img class="hsb-house-mid" src="img/house-2-mid.png" ng-show="kalkState.apartments > 200" />
+					<img class="hsb-house-mid" src="img/house-2-mid.png" ng-show="kalkState.apartments > 400" />
+					<img class="hsb-house-mid" src="img/house-2-mid.png" ng-show="kalkState.apartments > 600" />
+					<img class="hsb-house-base" src="img/house-2-base.png" />
+				</div>
+			</div>
+			<p class="hsb-range-value sans">{{ kalkState.apartments }}<span ng-show="kalkState.apartments == 450">+</span> Lägenhet<span ng-show="kalkState.apartments > 1">er</span></p>
+			<input type="range" min="1" max="450" ng-model="kalkState.apartments" data-role="none" class="hsb-range" id="hsb-range-apartments" />
+			<a href="#Kalk_C" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
+				<h2>Nästa Steg &rarr;</h2>
+			</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="Kalk_C" ng-controller="KalkCCtrl">
+		<div data-role="header">
+			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+		</div>
+		<div data-role="content">
+			<h3>Hur många styrelsemöten har ni om året?</h3>
+			<div class="hsb-grid" id="hsb-grid-months">
+				<div class="hsb-grid-inner clearfix">
+					<div ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12]" style="position:relative;">
+						<div style="position:relative;height:100px;">
+							<img ng-src="img/calendar-{{i}}.png" style="position:absolute;z-index:10;top:0;left:0;right:0;bottom:0;" />
+							<img class="hsb-calendar-overlay" style="position:absolute;z-index:100;top:0;left:0;right:0;bottom:0;" ng-src="img/calendar-overlay-{{ ((i+n+overlaySeed) % 7) + 1 }}.png" ng-repeat="n in [1,2,3]" ng-show="shouldShow(kalkState.meetings, i, n)" />
 						</div>
 					</div>
-	    		</div>
-	    	</div>
-	    	<div class="row">
-	    		<div class="span12">
-	    			<table class="table table-striped">
-	    				<tr>
-	    					<th>Medarbetare Welcom Web</th>
-	    				</tr>
-	    				<tr>
-	    					<td>Robert Frederiksen</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Och någon annan anonym</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Björn</td>
-	    				</tr>
-	    				<tr>
-	    					<td>Ludvig</td>
-	    				</tr>
-	    			</table>
-	    		</div>
-	    	</div>
-	    </div>
-    </body>
+				</div>
+			</div>
+			<p class="hsb-range-value sans">{{ kalkState.meetings }} Styrelsemöte<span ng-show="kalkState.meetings > 1">n</span> om året</p>
+			<input type="range" min="1" max="36" ng-model="kalkState.meetings" data-role="none" class="hsb-range" id="hsb-range-meetings" />
+			<a href="#Kalk_D" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
+				<h2>Nästa Steg &rarr;</h2>
+			</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="Kalk_D" ng-controller="KalkDCtrl">
+		<div data-role="header">
+			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+		</div>
+		<div data-role="content">
+			<form class="form-horizontal">
+				<div class="control-group">
+					<label class="control-label" for="kE_apartments">Antal lägenheter:</label>
+					<div class="controls">
+						<input type="text" name="kE_apartments" id="kE_apartments" ng-model="kalkState.apartments" data-role="none" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="kE_members">Antal styrelsemedlemmar:</label>
+					<div class="controls">
+						<input type="text" name="kE_members" id="kE_members" ng-model="kalkState.members" data-role="none" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="kE_meetings">Antal möten om året:</label>
+					<div class="controls">
+						<input type="text" name="kE_meetings" id="kE_meetings" ng-model="kalkState.meetings" data-role="none" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="kE_external">Externa tjänster</label>
+					<div class="controls">
+						<label for="kE_external">
+							<input type="checkbox" name="kE_external" id="kE_external" class="ios-switch" ng-model="kalkState.external" data-role="none" />
+						</label>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="kE_reconstruction">Några stora ombyggnationer?<br />(inom 12 månader)</label>
+					<div class="controls">
+						<label for="kE_reconstruction">
+							<input type="checkbox" name="kE_reconstruction" id="kE_reconstruction" class="ios-switch" ng-model="kalkState.reconstruction" data-role="none" />
+						</label>
+					</div>
+				</div>
+			</form>
+			<a href="#Kalk_E" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
+				<h2>Resultat &rarr;</h2>
+			</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="Kalk_E" ng-controller="KalkECtrl">
+		<div data-role="header">
+			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+			<h1></h1>
+			<a href="#" class="rightbutton" rel="external"><img src="img/hsb-logo.png" /></a>
+		</div>
+		<div data-role="content">
+			<p id="kalk-result-text">
+				HSB Göteborg rekommenderar ett snitt per styrelseledamot enligt KPI för 2013 på:
+			</p>
+			<div id="kalk-result">
+				<h1>{{ (kalkState.meetings * kalkState.apartments * 1000) / kalkState.members + (kalkState.external && 1000 || 0) + (kalkState.reconstruction && 1000 || 0) }}</h1>
+				<h2>kr/år</h2>
+			</div>
+			<a href="#PaketList" id="btn-final" class="btn btn-hsb btn-block btn-hsb-blue">
+				<h2>XXXXXXXXXXXX</h2>
+				<h3>Läs mer om våra paket som kan hjälpa dig.</h3>
+			</a>
+		</div>
+	</div>
+</body>
 </html>
