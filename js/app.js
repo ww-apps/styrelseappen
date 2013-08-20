@@ -66,10 +66,8 @@ app.controller('KalkCCtrl', ['$scope', 'kalkService', function($scope, kalkServi
 				val[additions[ii % (additions.length+1)]] += 1
 				$scope.showTable.push(val)
 			}
-			//console.log(JSON.stringify($scope.showTable, 0, 4))
 		}
 		
-		//console.log([parseInt(sliderval), i, $scope.showTable[parseInt(sliderval)][i]])
 		return ($scope.showTable[parseInt(sliderval)][i] >= n)
 	}
 }]);

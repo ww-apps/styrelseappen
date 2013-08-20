@@ -5,18 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	<meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="css/jquery.mobile.css" />
-	<link rel="stylesheet" href="css/ios-checkboxes.css" />
-	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="/css/jquery.mobile.css" />
+	<link rel="stylesheet" href="/css/ios-checkboxes.css" />
+	<link rel="stylesheet" href="/css/styles.css" />
 	
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.mobile.min.js"></script>
-	<script src="js/ios-checkboxes.js"></script>
-	<script src="js/angular.min.js"></script>
-	<script src="js/angular-sanitize.min.js"></script>
-	<script src="js/data.js"></script>
-	<script src="js/ui.js"></script>
-	<script src="js/app.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.mobile.min.js"></script>
+	<script src="/js/ios-checkboxes.js"></script>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/angular-sanitize.min.js"></script>
+	<script src="/js/data.js"></script>
+	<script src="/js/ui.js"></script>
+	<script src="/js/app.js"></script>
 	
 </head>
 <body ng-controller="MainCtrl">
@@ -30,7 +30,7 @@
 			<a href="#Kalk_A" class="btn btn-hsb btn-block btn-hsb-blue btn-icon clearfix" id="btn-start">
 				<div>
 					<div class="img">
-						<img src="img/icon-kalk.png" />
+						<img src="/img/icon-kalk.png" />
 					</div>
 					<div class="content">
 						<h2>Starta kalkylatorn</h2>
@@ -41,7 +41,7 @@
 			<a href="#PaketList" class="btn btn-hsb btn-block btn-icon clearfix" id="btn-list">
 				<div>
 					<div class="img">
-						<img src="img/icon-list.png" />
+						<img src="/img/icon-list.png" />
 					</div>
 					<div class="content">
 						<h2>HSB Förvaltningspaket</h2>
@@ -54,14 +54,14 @@
 	
 	<div data-role="page" id="PaketList" ng-controller="PaketListCtrl">
 		<div data-role="header">
-			<!--<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>-->
-			<a href="#Home" class="leftbutton"><img src="img/tillbaka.png" /></a>
+			<!--<a href="#" class="leftbutton" data-rel="back"><img src="/img/tillbaka.png" /></a>-->
+			<a href="#Home" class="leftbutton"><img src="/img/tillbaka.png" /></a>
 		</div>
 		<div data-role="content">
 			<ul class="hsb-list" id="PaketList_list">
 				<li class="package clearfix" ng-repeat="package in packages">
 					<a href="#PaketContent" ng-click="packageState.selected = package">
-						<img ng-src="img/paket-{{ package.id }}.png" />
+						<img ng-src="/img/paket-{{ package.id }}.png" />
 						<div>
 							<h2>{{ package.title }}</h2>
 							<p>{{ package.excerpt }}</p>
@@ -74,13 +74,13 @@
 	
 	<div data-role="page" id="PaketContent" ng-controller="PaketContentCtrl">
 		<div data-role="header">
-			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+			<a href="#" class="leftbutton" data-rel="back"><img src="/img/tillbaka.png" /></a>
 		</div>
 		<div data-role="content">
 			<div class="hsb-package-content">
 				<h2>{{ packageState.selected.title }}</h2>
 				<p>
-					<img ng-src="img/paket-{{ packageState.selected.id }}.png" />
+					<img ng-src="/img/paket-{{ packageState.selected.id }}.png" />
 					<span ng-bind-html="packageState.selected.text|nl2br"></span>
 				</p>
 			</div>
@@ -89,14 +89,14 @@
 	
 	<div data-role="page" id="Kalk_A" ng-controller="KalkACtrl">
 		<div data-role="header">
-			<a href="#" class="leftbutton"  data-rel="back"><img src="img/tillbaka.png" /></a>
+			<a href="#" class="leftbutton"  data-rel="back"><img src="/img/tillbaka.png" /></a>
 		</div>
 		<div data-role="content">
 			<h3>Hur många styrelsemedlemmar är ni?</h3>
 			<div class="hsb-grid" id="hsb-grid-members">
 				<div class="hsb-grid-inner clearfix" data-children="{{ kalkState.members }}">
 					<div ng-repeat="i in []|range:16">
-						<img ng-src="img/{{ portraits[(i + portraitSeed) % portraits.length] }}" ng-show="kalkState.members > i" />
+						<img ng-src="/img/{{ portraits[(i + portraitSeed) % portraits.length] }}.png" ng-show="kalkState.members > i" />
 					</div>
 				</div>
 			</div>
@@ -110,25 +110,25 @@
 	
 	<div data-role="page" id="Kalk_B" ng-controller="KalkBCtrl">
 		<div data-role="header">
-			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+			<a href="#" class="leftbutton" data-rel="back"><img src="/img/tillbaka.png" /></a>
 		</div>
 		<div data-role="content">
 			<h3>Hur många lägenheter är det i er förening?</h3>
 			<div id="hsb-houses">
 				<div class="hsb-house">
-					<img class="hsb-house-roof" src="img/house-1-roof.png" />
-					<img class="hsb-house-mid" src="img/house-1-mid.png" ng-show="kalkState.apartments > 100" />
-					<img class="hsb-house-mid" src="img/house-1-mid.png" ng-show="kalkState.apartments > 300" />
-					<img class="hsb-house-mid" src="img/house-1-mid.png" ng-show="kalkState.apartments > 500" />
-					<img class="hsb-house-base" src="img/house-1-base.png" />
-					<img class="hsb-house-tree" src="img/tree.png" />
+					<img class="hsb-house-roof" src="/img/house-1-roof.png" />
+					<img class="hsb-house-mid" src="/img/house-1-mid.png" ng-show="kalkState.apartments > 100" />
+					<img class="hsb-house-mid" src="/img/house-1-mid.png" ng-show="kalkState.apartments > 300" />
+					<img class="hsb-house-mid" src="/img/house-1-mid.png" ng-show="kalkState.apartments > 500" />
+					<img class="hsb-house-base" src="/img/house-1-base.png" />
+					<img class="hsb-house-tree" src="/img/tree.png" />
 				</div>
 				<div class="hsb-house">
-					<img class="hsb-house-roof" src="img/house-2-roof.png" />
-					<img class="hsb-house-mid" src="img/house-2-mid.png" ng-show="kalkState.apartments > 200" />
-					<img class="hsb-house-mid" src="img/house-2-mid.png" ng-show="kalkState.apartments > 400" />
-					<img class="hsb-house-mid" src="img/house-2-mid.png" ng-show="kalkState.apartments > 600" />
-					<img class="hsb-house-base" src="img/house-2-base.png" />
+					<img class="hsb-house-roof" src="/img/house-2-roof.png" />
+					<img class="hsb-house-mid" src="/img/house-2-mid.png" ng-show="kalkState.apartments > 200" />
+					<img class="hsb-house-mid" src="/img/house-2-mid.png" ng-show="kalkState.apartments > 400" />
+					<img class="hsb-house-mid" src="/img/house-2-mid.png" ng-show="kalkState.apartments > 600" />
+					<img class="hsb-house-base" src="/img/house-2-base.png" />
 				</div>
 			</div>
 			<p class="hsb-range-value sans">{{ kalkState.apartments }}<span ng-show="kalkState.apartments == 450">+</span> Lägenhet<span ng-show="kalkState.apartments > 1">er</span></p>
@@ -141,7 +141,7 @@
 	
 	<div data-role="page" id="Kalk_C" ng-controller="KalkCCtrl">
 		<div data-role="header">
-			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+			<a href="#" class="leftbutton" data-rel="back"><img src="/img/tillbaka.png" /></a>
 		</div>
 		<div data-role="content">
 			<h3>Hur många styrelsemöten har ni om året?</h3>
@@ -149,8 +149,8 @@
 				<div class="hsb-grid-inner clearfix">
 					<div ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12]" style="position:relative;">
 						<div style="position:relative;height:100px;">
-							<img ng-src="img/calendar-{{i}}.png" style="position:absolute;z-index:10;top:0;left:0;right:0;bottom:0;" />
-							<img class="hsb-calendar-overlay" style="position:absolute;z-index:100;top:0;left:0;right:0;bottom:0;" ng-src="img/calendar-overlay-{{ ((i+n+overlaySeed) % 7) + 1 }}.png" ng-repeat="n in [1,2,3]" ng-show="shouldShow(kalkState.meetings, i, n)" />
+							<img ng-src="/img/calendar-{{i}}.png" style="position:absolute;z-index:10;top:0;left:0;right:0;bottom:0;" />
+							<img class="hsb-calendar-overlay" style="position:absolute;z-index:100;top:0;left:0;right:0;bottom:0;" ng-src="/img/calendar-overlay-{{ ((i+n+overlaySeed) % 7) + 1 }}.png" ng-repeat="n in [1,2,3]" ng-show="shouldShow(kalkState.meetings, i, n)" />
 						</div>
 					</div>
 				</div>
@@ -165,7 +165,7 @@
 	
 	<div data-role="page" id="Kalk_D" ng-controller="KalkDCtrl">
 		<div data-role="header">
-			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+			<a href="#" class="leftbutton" data-rel="back"><img src="/img/tillbaka.png" /></a>
 		</div>
 		<div data-role="content">
 			<form class="form-horizontal">
@@ -212,9 +212,9 @@
 	
 	<div data-role="page" id="Kalk_E" ng-controller="KalkECtrl">
 		<div data-role="header">
-			<a href="#" class="leftbutton" data-rel="back"><img src="img/tillbaka.png" /></a>
+			<a href="#" class="leftbutton" data-rel="back"><img src="/img/tillbaka.png" /></a>
 			<h1></h1>
-			<a href="#" class="rightbutton" rel="external"><img src="img/hsb-logo.png" /></a>
+			<a href="#" class="rightbutton" rel="external"><img src="/img/hsb-logo.png" /></a>
 		</div>
 		<div data-role="content">
 			<p id="kalk-result-text">
