@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.welcom.HSB.Styrelseapp" versionCode="1.0" version="1.0.0">
-	<name>HSB Styrelseapp</name>
-	<description>En mobil applikation fÃr att rÃkna ut styrelsearvode</description>
+	<name>Styrelseapp</name>
+	<description>En mobil applikation för att räkna ut styrelsearvode</description>
 	<author href="http://welcom.se/">Welcom Web</author>
 	
 	<icon src="icon.png" />
