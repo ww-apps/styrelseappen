@@ -68,7 +68,12 @@ app.controller('KalkCCtrl', ['$scope', 'kalkService', function($scope, kalkServi
 			}
 		}
 		
-		return ($scope.showTable[parseInt(sliderval)][i] >= n)
+		try {
+			return ($scope.showTable[parseInt(sliderval)][i] >= n)
+		} catch(e) {
+			// If this happens, it's most likely because the value is out of range
+			return true
+		}
 	}
 }]);
 app.controller('KalkDCtrl', ['$scope', 'kalkService', function($scope, kalkService) {
@@ -76,4 +81,77 @@ app.controller('KalkDCtrl', ['$scope', 'kalkService', function($scope, kalkServi
 }]);
 app.controller('KalkECtrl', ['$scope', 'kalkService', function($scope, kalkService) {
 	$scope.kalkState = kalkService.kalkState
+	$scope.lghValueTable = {
+		3: 800,
+		11: 750,
+		16: 710,
+		26: 680,
+		36: 670,
+		46: 660,
+		56: 650,
+		66: 642,
+		76: 635,
+		86: 630,
+		96: 625,
+		106: 620,
+		116: 615,
+		126: 612,
+		136: 608,
+		150: 604,
+		165: 601,
+		180: 598,
+		190: 596,
+		200: 595,
+		210: 594,
+		220: 593,
+		230: 592,
+		240: 591,
+		250: 590,
+		260: 589,
+		270: 588,
+		280: 587,
+		290: 586,
+		300: 585,
+		310: 584, 
+		320: 583,
+		330: 582,
+		340: 581,
+		350: 580,
+		360: 579,
+		370: 578,
+		380: 577,
+		390: 576,
+		400: 575,
+		410: 574,
+		420: 573,
+		430: 572,
+		440: 571,
+		450: 570
+	}
+	$scope.result = function() {
+		var indexAdjustment = 0
+		var meetingValueMultiplier = 400 * (1 + indexAdjustment)
+		var reconstructionMultiplier = 1.2
+		var externalMultiplier = 0.7
+		var salaryCap = 260000
+		
+		var apartmentValue = Math.min(vlookup(parseInt($scope.kalkState.apartments), $scope.lghValueTable) * $scope.kalkState.apartments, salaryCap)
+		var meetingValue = $scope.kalkState.members * $scope.kalkState.meetings * meetingValueMultiplier
+		
+		apartmentValue = apartmentValue * (1 + indexAdjustment)
+		apartmentValue = $scope.kalkState.reconstruction ? apartmentValue * reconstructionMultiplier : apartmentValue
+		apartmentValue = $scope.kalkState.external ? apartmentValue * externalMultiplier : apartmentValue
+		
+		return Math.floor((apartmentValue + meetingValue) / $scope.kalkState.members)
+	}
 }]);
+
+function vlookup(needle, table) {
+	var ret = 0;
+	for(key in table) {
+		if(key <= needle) {
+			ret = table[key]
+		}
+	}
+	return ret
+}

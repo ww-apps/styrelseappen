@@ -17,8 +17,8 @@
 	border-radius: 999px;
 	margin: 0 .5em;
 	background: white;
-	background-image: linear-gradient(rgba(0,0,0,.1), transparent),
-	                  linear-gradient(90deg, rgb(61, 153, 245) 50%, transparent 50%);
+	background-image: -webkit-linear-gradient(rgba(0,0,0,.1), transparent),
+	                  -webkit-linear-gradient(45deg, rgb(61, 153, 245) 50%, transparent 50%);
 	background-size: 200% 100%;
 	background-position: 100% 0;
 	background-origin: border-box;
@@ -44,7 +44,7 @@
 	border: 1px solid rgba(0,0,0,.35);
 	border-radius: inherit;
 	background: white;
-	background-image: linear-gradient(rgba(0,0,0,.2), transparent);
+	background-image: -webkit-linear-gradient(rgba(0,0,0,.2), transparent);
 	box-shadow: 0 .1em .1em .1em rgba(255,255,255,.8) inset,
 	            0 0 .5em rgba(0,0,0,.3);
 	color: white;

@@ -1,5 +1,3 @@
-var standardexcerpt = "HSB erbjuder Sveriges bredaste utbud av förvaltningstjänster för bostadsrättsföreningar inom såväl teknisk som ekonomisk och administrativ förvaltning.";
-
 var lipsum = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat dapibus tortor ac aliquam. Quisque convallis odio at massa vestibulum laoreet. Praesent eu velit malesuada, pretium velit id, viverra velit. Suspendisse potenti. Fusce ultricies enim ullamcorper, consequat ligula sit amet, gravida magna. Phasellus neque tortor, suscipit quis lacinia quis, interdum id lorem. Suspendisse potenti. Cras pretium placerat laoreet.",
 "Morbi eu mi at orci adipiscing posuere. In facilisis at lacus ut convallis. Vestibulum venenatis suscipit sem eu ullamcorper. Etiam in ipsum in mauris rhoncus egestas. Suspendisse in felis ac ante volutpat dapibus. Phasellus risus diam, sollicitudin in sem eu, adipiscing molestie ante. Sed feugiat euismod dui, id porttitor nibh cursus et. Donec nec accumsan eros, non tempus erat. Donec consectetur volutpat ultricies. Maecenas vel orci vitae urna aliquam rhoncus. Aliquam eget dui dui.",
 "Mauris velit lacus, porta ac egestas nec, dignissim vitae nulla. Fusce placerat consectetur dolor, feugiat lobortis elit. Nunc suscipit dolor dui, eu mollis risus sollicitudin in. Fusce convallis magna ac purus sodales accumsan. Donec ornare luctus metus, vel tincidunt nunc facilisis at. Donec luctus dui eget ligula consectetur, eget cursus nisl cursus. Nunc ut vestibulum est. Aliquam erat magna, blandit ut risus et, egestas aliquam sem. Maecenas tincidunt a lectus id tincidunt. Curabitur molestie sapien dolor, quis eleifend augue tempor at. Phasellus at erat vulputate, scelerisque nisl ac, ornare eros.",
@@ -10,25 +8,25 @@ packages = [
 	{
 		id: "large",
 		title: "Förvaltningstjänster Large",
-		excerpt: standardexcerpt,
+		excerpt: "För föreningar som arbetar långsiktigt och har hög ambitionsnivå med styrelsearbetet. Innehåller bland annat 5-årsprognos, fastighetsdrift och trädgårdsskötsel.",
 		text: lipsum
 	},
 	{
 		id: "medium",
 		title: "Förvaltningstjänster Medium",
-		excerpt: standardexcerpt,
+		excerpt: "För föreningar där medlemmarna har hög kompetens, men saknar tid för arbete. Innehåller bland annat underhållsplan, fastighetsskötsel och snöjour.",
 		text: lipsum
 	},
 	{
 		id: "small",
 		title: "Förvaltningstjänster Small",
-		excerpt: standardexcerpt,
+		excerpt: "För föreningar som vill göra mycket själva, men som ibland kan tänka sig att köpa tjänster på timpenning. Innehåller bland annat bokföring, hyror/överlåtelser och felanmälan/jour.",
 		text: lipsum
 	},
 	{
 		id: "plus",
 		title: "Förvaltningstjänster Plus",
-		excerpt: standardexcerpt,
+		excerpt: "HSBs plustjänster är tillval som gör att föreningen kan skräddarsy sin förvaltning. Några exempel: NABO, ombyggnadstjänster, utbildning, låneupphandling och markanläggning.",
 		text: lipsum
 	}
 ];

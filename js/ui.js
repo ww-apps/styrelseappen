@@ -5,4 +5,5 @@ $(document).ready(function() {
 										'color-stop(' + percent + ', #00377b), ' +
 										'color-stop(' + percent + ', #e3e5e6))'
 	}).change()
+	$('[data-role="page"]').css('min-height', '')
 })
