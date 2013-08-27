@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.welcom.HSB.Styrelseapp" versionCode="1.0" version="1.0.0">
+	<name>HSB Styrelseapp</name>
+	<description>uppfinnarn was here.</description>
+	<author href="http://welcom.se/">Welcom Web</author>
+	
+	<icon src="icon.png" />
+	<icon src="icon.png" gap:platform="ios" width="57" height="57" />
+	<icon src="icon_retina.png" gap:platform="ios" width="114" height="114" />
+	<icon src="icon_android.png" gap:platform="android" gap:density="ldpi" />
+	
+	<preference name="orientation" value="portrait" />
+	<preference name="webviewbounce" value="false" />
+</widget>
