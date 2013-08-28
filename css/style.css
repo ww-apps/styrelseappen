@@ -1,3 +1,9 @@
+[data-role=page] [data-role=content] .hsb-package-content h3{text-align: left;}
+[data-role=page] [data-role=content] .hsb-package-content h2{margin-bottom:2px;}
+[data-role=page] [data-role=content] .hsb-package-content p{margin-top:0;}
+.hsb-package-content ul{padding-left:20px;margin-bottom:20px; margin-top:5px;}
+.hsb-package-content img{float:right; margin: 10px;}
+
 .clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0}
 .clearfix:after{clear:both}
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
@@ -249,7 +255,7 @@ ul.hsb-list li a:after{clear:both}
 ul.hsb-list li img{float:left;width:20%}
 ul.hsb-list li div{display:block;overflow:hidden;padding-left:20px}ul.hsb-list li div h2{font-size:14px !important;line-height:1.3em !important;margin-top:0;margin-bottom:7px !important;color:#333}
 ul.hsb-list li div p{font-size:13px;line-height:1.6em;margin-bottom:0;margin-top:0;word-wrap:break-word;font-size:12px;text-shadow:none;color:#555 !important;font-weight:normal}
-.hsb-package-content{margin:10px;border-top:1px solid rgba(0,0,0,0.1)}.hsb-package-content p img{float:left;padding-right:20px}
+.hsb-package-content{margin:10px;border-top:1px solid rgba(0,0,0,0.1)}.hsb-package-content p img{float:right;padding-right:20px}
 .btn-hsb{text-decoration:none;border-radius:10px;text-shadow:none;margin-bottom:20px;color:#fff}.btn-hsb:hover{background-position:0 !important}
 .btn-hsb.btn-icon{padding:0;height:85px}.btn-hsb.btn-icon>div{display:table;width:100%;height:100%}.btn-hsb.btn-icon>div>.img{padding-left:10px;display:table-cell;vertical-align:middle;max-height:70px;min-width:70px}.btn-hsb.btn-icon>div>.img img{max-width:100%;max-height:100%}
 .btn-hsb.btn-icon>div>.content{display:table-cell;vertical-align:middle;text-align:left;padding:10px;padding-left:20px;width:100%}.btn-hsb.btn-icon>div>.content h2{margin-bottom:5px;margin-top:0;font-size:16px}
@@ -275,3 +281,4 @@ ul.hsb-list li div p{font-size:13px;line-height:1.6em;margin-bottom:0;margin-top
 #kalk-result-text{font-family:sans-serif;font-weight:bold;text-align:center}
 #kalk-result{text-align:center;margin:50px 0}#kalk-result h1{font-size:76px;line-height:76px;margin:0;margin-bottom:10px}
 #kalk-result h2{font-size:26px;line-height:26px;margin:0}
+

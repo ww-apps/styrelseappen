@@ -9,25 +9,112 @@ packages = [
 		id: "large",
 		title: "Förvaltningstjänster Large",
 		excerpt: "För föreningar som arbetar långsiktigt och har hög ambitionsnivå med styrelsearbetet. Innehåller bland annat 5-årsprognos, fastighetsdrift och trädgårdsskötsel.",
-		text: lipsum
+		text: '<p>För föreningar som arbetar långsiktigt och har höga ambitioner med styrelsearbetet.</p>\
+<h3 class="text-align-left">EKONOMI OCH ADMINISTRATION</h3>\
+<ul>\
+<li>Styrelsenätet</li>\
+<li>Bokföring</li>\
+<li>Bokslut</li>\
+<li>Budget</li>\
+<li>Skattehantering</li>\
+<li>Hyror/avgifter</li>\
+<li>Panter/överlåtelser</li>\
+<li>Inkasso</li>\
+<li>Löne- och arvodeshantering</li>\
+<li>Webbfaktura</li>\
+<li>Underhållsplan</li>\
+<li>Kontering</li>\
+<li>Uthyrning av p-platser</li>\
+<li>Nyckelhantering</li>\
+<li>Digitalt styrelserum</li>\
+<li>HSBwebb(brf-hemsidaför HSB-medlemsföreningar)</li>\
+</ul>\
+<h3 class="text-align-left">FÖRVALTARTJÄNST</h3>\
+<ul>\
+<li>Hjälper till att förbereda och verkställa styrelsens beslut</li>\
+</ul>\
+<h3 class="text-align-left">TEKNIK</h3>\
+<ul>\
+<li>Felanmälan/jour</li>\
+<li>Tillsynsrond</li>\
+<li>Fastighetsskötsel</li>\
+<li>Lokalvård</li>\
+<li>Snöjour</li>\
+<li>Fastighetsdrift</li>\
+<li>Trädgårdsskötsel</li>\
+</ul>'
 	},
 	{
 		id: "medium",
 		title: "Förvaltningstjänster Medium",
 		excerpt: "För föreningar där medlemmarna har hög kompetens, men saknar tid för arbete. Innehåller bland annat underhållsplan, fastighetsskötsel och snöjour.",
-		text: lipsum
+		text: '<p>För föreningar där medlemmarna har hög kompetens, men saknar tid för styrelsearbetet.</p>\
+<h3 class="text-align-left">EKONOMI OCH ADMINISTRATION</h3>\
+<ul>\
+<li>Styrelsenätet</li>\
+<li>Bokföring</li>\
+<li>Bokslut</li>\
+<li>Budget</li>\
+<li>Skattehantering</li>\
+<li>Hyror/avgifter</li>\
+<li>Panter/överlåtelser</li>\
+<li>Inkasso</li>\
+<li>Löne- och arvodeshantering</li>\
+<li>Webbfaktura</li>\
+<li>Underhållsplan</li>\
+<li>Kontering</li>\
+<li>Uthyrning av p-platser</li>\
+<li>Nyckelhantering</li>\
+</ul>\
+<h3 class="text-align-left">TEKNIK</h3>\
+<ul>\
+<li>Felanmälan/jour</li>\
+<li>Tillsynsrond</li>\
+<li>Fastighetsskötsel</li>\
+<li>Lokalvård</li>\
+<li>Snöjour</li>\
+</ul>'
 	},
 	{
 		id: "small",
 		title: "Förvaltningstjänster Small",
 		excerpt: "För föreningar som vill göra mycket själva, men som ibland kan tänka sig att köpa tjänster på timpenning. Innehåller bland annat bokföring, hyror/överlåtelser och felanmälan/jour.",
-		text: lipsum
+		text: '<p>För föreningar som vill göra mycket själva, men som ibland kan tänka sig att köpa tjänster på timpenning.</p>\
+<h3 class="text-align-left">EKONOMI OCH ADMINISTRATION</h3>\
+<ul>\
+<li>Styrelsenätet</li>\
+<li>Bokföring</li>\
+<li>Bokslut</li>\
+<li>Budget</li>\
+<li>Skattehantering</li>\
+<li>Hyror/avgifter</li>\
+<li>Panter/överlåtelser</li>\
+<li>Inkasso</li>\
+<li>Löne- och arvodeshantering</li>\
+<li>Webbfaktura</li>\
+</ul>\
+<h3 class="text-align-left">TEKNIK</h3>\
+<ul>\
+<li>Felanmälan/jour</li>\
+<li>Tillsynsrond</li></ul>'
 	},
 	{
 		id: "plus",
 		title: "Förvaltningstjänster Plus",
 		excerpt: "HSBs plustjänster är tillval som gör att föreningen kan skräddarsy sin förvaltning. Några exempel: NABO, ombyggnadstjänster, utbildning, låneupphandling och markanläggning.",
-		text: lipsum
+		text: '<p>Pluspaketet kompletterar de andra paketen och hjälper dig att skräddarsy din förvaltning. Plustjänsterna kan även köpas enskilt.</p>\
+<h3 class="text-align-left">PLUSTJÄNSTER</h3>\
+<ul>\
+<li>NABO</li>\
+<li>Förvaltartjänst</li>\
+<li>Juridiska tjänster</li>\
+<li>Utbildning och konferens</li>\
+<li>Tjänstervidombyggnad</li>\
+<li>Klimat- och energitjänster</li>\
+<li>Mark och trädgård</li>\
+<li>Besiktningar</li>\
+<li>El och VVS</li>\
+</ul>'
 	}
 ];
 var portraits = [
