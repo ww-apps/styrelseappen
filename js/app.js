@@ -6,7 +6,7 @@ app.factory("kalkService", function() {
 			members: 12,
 			apartments: 8,
 			meetings: 12,
-			external: true,
+			external: false,
 			reconstructions: false
 		}
 	}

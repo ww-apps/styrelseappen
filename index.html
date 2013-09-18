@@ -35,7 +35,7 @@
 						</div>
 						<div class="content">
 							<h2>Starta kalkylatorn</h2>
-							<h3>Se vilket styrelsearvode HSB rekommenderar</h3>
+							<h3>Se vilket styrelsearvode HSB Göteborg rekommenderar</h3>
 						</div>
 					</div>
 				</a>
@@ -45,8 +45,8 @@
 							<img src="img/icon-list.png" />
 						</div>
 						<div class="content">
-							<h2>HSB Förvaltningspaket</h2>
-							<h3>Se vad HSB kan göra för din förening</h3>
+							<h2>HSB Tjänstepaket</h2>
+							<h3>Se vad HSB Göteborg kan göra för din förening</h3>
 						</div>
 					</div>
 				</a>
@@ -82,6 +82,7 @@
 				<h2>{{ packageState.selected.title }}</h2>
 				<img ng-src="img/paket-{{ packageState.selected.id }}.png" />
 				<div ng-bind-html="packageState.selected.text|nl2br"></div>
+				<p><a href="http://www.hsb.se/tjanster/tjanster-for-boende/goteborg/2.42150/kontakt" target="_blank">Kontakta HSB Göteborg om tjänstepaket</a></p>
 			</div>
 		</div>
 	</div>
@@ -194,7 +195,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="kE_external">Externa tjänster<br />Förvaltare, vicevärd mm.</label>
+						<label class="control-label" for="kE_external">Externa tjänster<br />(förvaltare, vicevärd med mera)</label>
 						<div class="controls">
 							<label for="kE_external">
 								<input type="checkbox" name="kE_external" id="kE_external" class="ios-switch" ng-model="kalkState.external" data-role="none" />
@@ -234,7 +235,7 @@
 				<a href="#PaketList" id="btn-final" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
 					<div>
 						<h2>Vill ni minska på jobbet?</h2>
-						<h3>Läs mer om HSBs tjänstepaket som kan hjälpa er.</h3>
+						<h3>Läs mer om HSBs tjänstepaket<br />som kan hjälpa er.</h3>
 					</div>
 				</a>
 			</div>
