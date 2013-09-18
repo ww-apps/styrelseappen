@@ -26,7 +26,7 @@
 		<div data-role="content">
 			<div class="vcenter">
 				<h2>Välkommen till HSB Göteborgs styrelseapp</h2>
-				<p>Räkna ut hur mycket din bostadsrättsförening bör betala i styrelsearvode. Svara på några enkla frågor och få förslag på en totalsumma som täcker samtliga ersättningar, inklusive fasta arvoden och eventuella timersättningar. Förslaget är en rekommendation.</p>
+				<p>Räkna ut hur mycket din bostadsrättsförening bör betala dig per år i styrelsearvode. Du får ett förslag på en totalsumma som täcker samtliga ersättningar, inklusive fasta arvoden och eventuella timersättningar. Förslaget är en rekommendation.</p>
 				
 				<a href="#Kalk_A" class="btn btn-hsb btn-block btn-hsb-blue btn-icon clearfix" id="btn-start">
 					<div>
@@ -35,7 +35,7 @@
 						</div>
 						<div class="content">
 							<h2>Starta kalkylatorn</h2>
-							<h3>Se vilket styrelsearvode vi rekommenderar</h3>
+							<h3>Se vilket styrelsearvode HSB rekommenderar</h3>
 						</div>
 					</div>
 				</a>
@@ -46,7 +46,7 @@
 						</div>
 						<div class="content">
 							<h2>HSB Förvaltningspaket</h2>
-							<h3>Se vad vi kan göra för er förening</h3>
+							<h3>Se vad HSB kan göra för din förening</h3>
 						</div>
 					</div>
 				</a>
@@ -194,7 +194,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="kE_external">Externa tjänster</label>
+						<label class="control-label" for="kE_external">Externa tjänster<br />Förvaltare, vicevärd mm.</label>
 						<div class="controls">
 							<label for="kE_external">
 								<input type="checkbox" name="kE_external" id="kE_external" class="ios-switch" ng-model="kalkState.external" data-role="none" />
@@ -223,17 +223,18 @@
 		</div>
 		<div data-role="content">	
 			<div class="vcenter">
+				<h2 style="text-align:center;">Klart!</h2>
 				<p id="kalk-result-text">
 					HSB Göteborg rekommenderar ett snitt per styrelseledamot enligt KPI för 2013 på:
 				</p>
 				<div id="kalk-result">
 					<h1>{{ result() }}</h1>
-					<h2>kr/år</h2>
+					<h2>kr/år och person</h2>
 				</div>
 				<a href="#PaketList" id="btn-final" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
 					<div>
 						<h2>Vill ni minska på jobbet?</h2>
-						<h3>Läs mer om våra paket som kan hjälpa er.</h3>
+						<h3>Läs mer om HSBs tjänstepaket som kan hjälpa er.</h3>
 					</div>
 				</a>
 			</div>
