@@ -142,7 +142,10 @@ app.controller('KalkECtrl', ['$scope', 'kalkService', function($scope, kalkServi
 		apartmentValue = $scope.kalkState.reconstruction ? apartmentValue * reconstructionMultiplier : apartmentValue
 		apartmentValue = $scope.kalkState.external ? apartmentValue * externalMultiplier : apartmentValue
 		
-		return Math.floor((apartmentValue + meetingValue) / $scope.kalkState.members)
+		var result = Math.floor((apartmentValue + meetingValue) / $scope.kalkState.members);
+		var thousand = parseInt(result/1000);
+		var rest = result/1000 - Math.floor(result/1000);
+		return result >= 1000 ? thousand + ' ' + parseInt(rest*1000) : result;
 	}
 }]);
 

@@ -25,8 +25,8 @@
 	<div data-role="page" class="vcentered" id="Home">
 		<div data-role="content">
 			<div class="vcenter">
-				<h2>Välkommen till HSB Göteborgs styrelseapp</h2>
-				<p>Räkna ut hur mycket din bostadsrättsförening bör betala dig per år i styrelsearvode. Du får ett förslag på en totalsumma som täcker samtliga ersättningar, inklusive fasta arvoden och eventuella timersättningar. Förslaget är en rekommendation.</p>
+				<h2>HSB Göteborgs styrelseapp</h2>
+				<p>Här räknar du ut hur mycket din bostadsrättsförening bör betala dig per år i styrelsearvode. Du får ett förslag på en totalsumma som täcker samtliga ersättningar, inklusive fasta arvoden och eventuella timersättningar. Förslaget är en rekommendation.</p>
 				
 				<a href="#Kalk_A" class="btn btn-hsb btn-block btn-hsb-blue btn-icon clearfix" id="btn-start">
 					<div>
@@ -101,10 +101,10 @@
 						</div>
 					</div>
 				</div>
-				<p class="hsb-range-value sans">{{ kalkState.members }} Styrelsemedlem<span ng-show="kalkState.members > 1">mar</span></p>
+				<p class="hsb-range-value sans">{{ kalkState.members }} styrelsemedlem<span ng-show="kalkState.members > 1">mar</span></p>
 				<input type="range" min="3" max="16" ng-model="kalkState.members" data-role="none" class="hsb-range" id="hsb-range-members" />
 				<a href="#Kalk_B" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
-					<h2>Nästa Steg &rarr;</h2>
+					<h2>Nästa steg &rarr;</h2>
 				</a>
 			</div>
 		</div>
@@ -134,10 +134,10 @@
 						<img class="hsb-house-base" src="img/house-2-base.png" />
 					</div>
 				</div>
-				<p class="hsb-range-value sans">{{ kalkState.apartments }}<span ng-show="kalkState.apartments == 450">+</span> Lägenhet<span ng-show="kalkState.apartments > 1">er</span></p>
+				<p class="hsb-range-value sans">{{ kalkState.apartments }}<span ng-show="kalkState.apartments == 450">+</span> lägenhet<span ng-show="kalkState.apartments > 1">er</span></p>
 				<input type="range" min="1" max="450" ng-model="kalkState.apartments" data-role="none" class="hsb-range" id="hsb-range-apartments" />
 				<a href="#Kalk_C" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
-					<h2>Nästa Steg &rarr;</h2>
+					<h2>Nästa steg &rarr;</h2>
 				</a>
 			</div>
 		</div>
@@ -160,10 +160,10 @@
 						</div>
 					</div>
 				</div>
-				<p class="hsb-range-value sans">{{ kalkState.meetings }} Styrelsemöte<span ng-show="kalkState.meetings > 1">n</span> om året</p>
+				<p class="hsb-range-value sans">{{ kalkState.meetings }} styrelsemöte<span ng-show="kalkState.meetings > 1">n</span> om året</p>
 				<input type="range" min="1" max="36" ng-model="kalkState.meetings" data-role="none" class="hsb-range" id="hsb-range-meetings" />
 				<a href="#Kalk_D" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
-					<h2>Nästa Steg &rarr;</h2>
+					<h2>Nästa steg &rarr;</h2>
 				</a>
 			</div>
 		</div>
@@ -195,7 +195,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="kE_external">Externa tjänster<br />(förvaltare, vicevärd med mera)</label>
+						<label class="control-label" for="kE_external">Externa tjänster?<br /><span class="small">(förvaltare, vicevärd med mera)</span></label>
 						<div class="controls">
 							<label for="kE_external">
 								<input type="checkbox" name="kE_external" id="kE_external" class="ios-switch" ng-model="kalkState.external" data-role="none" />
@@ -203,7 +203,7 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="kE_reconstruction">Några stora ombyggnationer?<br />(inom 12 månader)</label>
+						<label class="control-label" for="kE_reconstruction">Några stora ombyggnationer?<br /><span class="small">(inom 12 månader)</span></label>
 						<div class="controls">
 							<label for="kE_reconstruction">
 								<input type="checkbox" name="kE_reconstruction" id="kE_reconstruction" class="ios-switch" ng-model="kalkState.reconstruction" data-role="none" />
@@ -234,8 +234,8 @@
 				</div>
 				<a href="#PaketList" id="btn-final" class="btn btn-hsb btn-block btn-hsb-blue btn-hsb-next">
 					<div>
-						<h2>Vill ni minska på jobbet?</h2>
-						<h3>Läs mer om HSBs tjänstepaket<br />som kan hjälpa er.</h3>
+						<h2>Vill du jobba lite mindre?</h2>
+						<h3>Läs mer om framtidens förvaltningstjänster</h3>
 					</div>
 				</a>
 			</div>
