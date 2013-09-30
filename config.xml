@@ -11,7 +11,5 @@
 	<gap:splash src="splash.png" />
 	
 	<preference name="orientation" value="portrait" />
-	<preference name="webviewbounce" value="false" />
-	<access origin="http://www.hsb.se" browserOnly="true" />
 	
 </widget>
