@@ -240,7 +240,12 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .form-horizontal{display:table;width:100%;border-spacing:0 10px}.form-horizontal .control-group{display:table-row}.form-horizontal .control-group .control-label{display:table-cell;vertical-align:middle;padding-right:10px;font-size:13px;font-weight:bold}
 .form-horizontal .control-group .controls{display:table-cell}.form-horizontal .control-group .controls input[type=text],.form-horizontal .control-group .controls [type=number]{width:90%;height:40px;box-shadow:inset 0 2px 3px rgba(0,0,0,0.125)}
 .form-horizontal .control-group .controls select{display:none !important}
-[data-role=page]{background-image:url('../img/bg.png')}[data-role=page] [data-role=header]{height:50px;background:transparent;border:none}[data-role=page] [data-role=header] a{background:none;border:none;min-width:40%}[data-role=page] [data-role=header] a.leftbutton{float:left;margin-left:0;background-position:center left}
+[data-role=page]{background-image:url('../img/bg.png')}
+[data-role=page] [data-role=header]{height:50px;background:transparent;border:none;}
+@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+	[data-role=page] [data-role=header]{margin-top:20px;}
+}
+[data-role=page] [data-role=header] a{background:none;border:none;min-width:40%}[data-role=page] [data-role=header] a.leftbutton{float:left;margin-left:0;background-position:center left}
 [data-role=page] [data-role=header] a.rightbutton{float:right;margin-right:20px;background-position:center right}
 [data-role=page] [data-role=header] a img{height:100%}
 [data-role=page] [data-role=content]{font-family:Georgia,serif;font-size:10pt;line-height:21px;color:#222222;padding-top:15px;margin-bottom:0;padding-bottom:0;display:table;bottom:0;right:0;width:100%; box-sizing: border-box; -ms-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}[data-role=page] [data-role=content]>h2,[data-role=page] [data-role=content]>.vcenter>h2,[data-role=page] [data-role=content]>p,[data-role=page] [data-role=content]>.vcenter>p{padding:0 20px}
