@@ -9,6 +9,7 @@
 	<icon src="icon_retina.png" gap:platform="ios" width="114" height="114" />
 	<icon src="icon_android.png" gap:platform="android" gap:density="hdpi" />
 	<gap:splash src="splash.png" />
+	<gap:splash src="splash-568h@2x~iphone.png" gap:platform="ios" width="640" height="1136" />
 	
 	<preference name="orientation" value="portrait" />
 	<preference name="webviewbounce" value="false" />
