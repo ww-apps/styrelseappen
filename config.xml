@@ -13,5 +13,6 @@
 	
 	<preference name="orientation" value="portrait" />
 	<preference name="webviewbounce" value="false" />
+	<preference name="target-device" value="handset" />
 	
 </widget>
