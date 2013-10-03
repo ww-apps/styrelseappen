@@ -145,7 +145,13 @@ app.controller('KalkECtrl', ['$scope', 'kalkService', function($scope, kalkServi
 		var result = Math.floor((apartmentValue + meetingValue) / $scope.kalkState.members);
 		var thousand = parseInt(result/1000);
 		var rest = result/1000 - Math.floor(result/1000);
-		return result >= 1000 ? thousand + ' ' + parseInt(rest*1000) : result;
+		var right = '' + parseInt(rest*1000);
+		
+		while(right.length < 3){
+			right = '0' + right;
+		}	
+		
+		return result >= 1000 ? thousand +  ' ' + right : result;
 	}
 }]);
 
