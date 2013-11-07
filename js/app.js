@@ -136,6 +136,7 @@ app.controller('KalkECtrl', ['$scope', 'kalkService', function($scope, kalkServi
 		440: 571,
 		450: 570
 	}
+
 	$scope.result = function() {
 		var indexAdjustment = 0
 		var meetingValueMultiplier = 400 * (1 + indexAdjustment)
@@ -153,7 +154,7 @@ app.controller('KalkECtrl', ['$scope', 'kalkService', function($scope, kalkServi
 		var result = Math.floor((apartmentValue + meetingValue) / $scope.kalkState.members);
 		var thousand = parseInt(result/1000);
 		var rest = result/1000 - Math.floor(result/1000);
-		var right = '' + parseInt(rest*1000);
+		var right = '' + parseInt(rest*(1000 + 0.0001));
 		
 		while(right.length < 3){
 			right = '0' + right;
@@ -161,6 +162,33 @@ app.controller('KalkECtrl', ['$scope', 'kalkService', function($scope, kalkServi
 		
 		return result >= 1000 ? thousand +  ' ' + right : result;
 	}
+	
+	$scope.resultBoard = function() {
+		var indexAdjustment = 0
+		var meetingValueMultiplier = 400 * (1 + indexAdjustment)
+		var reconstructionMultiplier = 1.2
+		var externalMultiplier = 0.7
+		var salaryCap = 260000
+		
+		var apartmentValue = Math.min(vlookup(parseInt($scope.kalkState.apartments), $scope.lghValueTable) * $scope.kalkState.apartments, salaryCap)
+		var meetingValue = $scope.kalkState.members * $scope.kalkState.meetings * meetingValueMultiplier
+		
+		apartmentValue = apartmentValue * (1 + indexAdjustment)
+		apartmentValue = $scope.kalkState.reconstruction ? apartmentValue * reconstructionMultiplier : apartmentValue
+		apartmentValue = $scope.kalkState.external ? apartmentValue * externalMultiplier : apartmentValue
+		
+		var result = Math.floor((apartmentValue + meetingValue) / $scope.kalkState.members) * $scope.kalkState.members;
+		var thousand = parseInt(result/1000);
+		var rest = result/1000 - Math.floor(result/1000);
+		var right = '' + parseInt(rest*(1000 + 0.0001));
+		
+		while(right.length < 3){
+			right = '0' + right;
+		}	
+		
+		return result >= 1000 ? thousand +  ' ' + right : result;
+	}
+	
 }]);
 
 function vlookup(needle, table) {
